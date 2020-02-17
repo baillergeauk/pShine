@@ -1,0 +1,163 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "77bd7145_79ee39a1",
+        "filename": "example.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003556
+      },
+      "writtenOn": "2020-02-17T21:05:55Z",
+      "side": 1,
+      "message": "I\u0027d give a working config as example, not something with empty values, as that is usually easier to use",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8b4801ab_1e608172",
+        "filename": "example.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1003556
+      },
+      "writtenOn": "2020-02-17T21:05:55Z",
+      "side": 1,
+      "message": "(can this use $CCCSCRATCHDIR? ${env:CCCSCRATCHDIR}? some arbitrary variable syntax?)",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6dde2ae3_33337f6e",
+        "filename": "example.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1003556
+      },
+      "writtenOn": "2020-02-17T21:05:55Z",
+      "side": 1,
+      "message": "What is the unit? Does it support suffixes e.g. GB? G?",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "645d7014_6fc7e242",
+        "filename": "pShine",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003556
+      },
+      "writtenOn": "2020-02-17T21:05:55Z",
+      "side": 1,
+      "message": "Try to run `shellcheck` on the script. I think it should be installable in pcocc VMs but otherwise there is (used to be?) an online service, there are plenty of small things to fix (mostly quotes, some variable used but not defined, etc)\n\nI also like to run my scripts with set -u (warn when using unset variables), -e is more disputable as it is hard to use...",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7593f056_11800a4d",
+        "filename": "pShine",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1003556
+      },
+      "writtenOn": "2020-02-17T21:05:55Z",
+      "side": 1,
+      "message": "Try to avoid trailing spaces if possible.",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "17352acd_1da18c9f",
+        "filename": "pShine",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1003556
+      },
+      "writtenOn": "2020-02-17T21:05:55Z",
+      "side": 1,
+      "message": "(nit) no need to use $ when refering to variables within $(()), e.g. $((mds_count*mdt_count)) would work",
+      "range": {
+        "startLine": 12,
+        "startChar": 17,
+        "endLine": 12,
+        "endChar": 18
+      },
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dd2df995_dbcf027d",
+        "filename": "pShine",
+        "patchSetId": 2
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1003556
+      },
+      "writtenOn": "2020-02-17T21:05:55Z",
+      "side": 1,
+      "message": "prefer cat \u003e file \u003c\u003c EOF\n...\nEOF\nfor long strings (see https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Here-Documents )",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3e57832d_6e9f1f5a",
+        "filename": "pShine",
+        "patchSetId": 2
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1003556
+      },
+      "writtenOn": "2020-02-17T21:05:55Z",
+      "side": 1,
+      "message": "Creating a temporary file with fixed name is current directory isn\u0027t great if you want to start two clusters at the same time for some reason.\n\nI\u0027d suggest using mktemp, but in this case it could be done in the cloud-init as a run command? Just guard it with a \"$HOSTNAME\" \u003d\u003d \"vm0\" check since it needs to run only once.",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "49bf633e_85ce9884",
+        "filename": "pShine",
+        "patchSetId": 2
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1003556
+      },
+      "writtenOn": "2020-02-17T21:05:55Z",
+      "side": 1,
+      "message": "actual code within a case switch is usually more indented",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
