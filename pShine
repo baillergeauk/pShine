@@ -1,0 +1,318 @@
+#!/bin/bash
+
+create () { 
+    
+    if [ ! -f $1 ]; then
+        echo "Le fichier $1 n'existe pas, veuillez entrer un fichier de configuration valide"
+        exit 1
+    fi
+
+    source $1
+
+    total_mdt=$(($mds_count*$mdt_count)) # overall mdt count
+    total_ost=$(($oss_count*$ost_count)) # overall ost count
+    total_vm=$(($mds_count+$oss_count+$client_count)) #overall vm count
+    args=""            #future args for pcocc alloc 
+
+    # .yaml and cloud-config path (must not change bcs pcocc searches for templates
+    # in specific directories)
+    dir=$HOME/.pcocc/templates.d
+
+    ### Creating our new template and cloud-config directory ###
+
+    if ! [ -d "$dir" ]; then
+         mkdir $dir;
+    fi
+
+    ### Creating targets ###
+
+    if [ -d "$diskfolder/$fsname" ]; then
+        rm -r $diskfolder/$fsname
+    fi
+
+    mkdir $diskfolder/$fsname
+
+    truncate -s $mgt_size $diskfolder/$fsname/mgt
+
+    for i in `seq 0 $(($total_mdt-1))`; do
+        truncate -s $mdt_size $diskfolder/$fsname/mdt$i
+    done
+
+    for i in `seq 0 $(($total_ost-1))`; do
+        truncate -s $ost_size $diskfolder/$fsname/ost$i
+    done
+
+    ### Writing pcocc template conf ###
+
+    ## Base template 
+
+    echo -e "$fsname/$server_image: 
+    image: '$server_image'
+    resource-set : \"default\"
+    description : \"pShine template for /$fsname\"
+    user-data: $dir/$fsname.cloud-config" > $dir/$fsname.yaml
+
+    ## Specific template for servers, based on wished configuration ##
+    # mds template with mgs on the first one #
+
+    t=0     #needed to keep track of overall mdt number 
+
+    for i in `seq 0 $(($mds_count-1))`; do
+        echo -e "
+$fsname/mds$i:
+    inherits: '$fsname/$server_image'" >> $dir/$fsname.yaml
+        args+="$fsname/mds$i,"
+        echo -e "    persistent-drives:" >> $dir/$fsname.yaml
+        for j in `seq 0 $(($mdt_count-1))`; do
+        echo -e "       - '$diskfolder/$fsname/mdt$t'" >> $dir/$fsname.yaml
+        t=$((t+1))
+        done
+        if [ $i -eq 0 ]; then
+        echo -e "       - '$diskfolder/$fsname/mgt'" >> $dir/$fsname.yaml
+        fi
+
+    done
+
+    # oss template #
+
+    t=0     #same as before but for ost
+
+    for i in `seq 0 $(($oss_count-1))`; do
+        echo -e "
+$fsname/oss$i:
+    inherits: '$fsname/$server_image'" >> $dir/$fsname.yaml
+        args+="$fsname/oss$i,"
+        echo -e "    persistent-drives:" >> $dir/$fsname.yaml
+        for j in `seq 0 $(($ost_count-1))`; do
+        echo -e "       - '$diskfolder/$fsname/ost$t'" >> $dir/$fsname.yaml
+        t=$((t+1))
+        done
+    done
+
+    # client template  #
+
+    echo -e "
+$fsname/client:
+    inherits: '$fsname/$server_image'
+    image: '$client_image'
+    " >> $dir/$fsname.yaml
+
+
+    # saving number of client to make restart possible with pShineStart
+
+    echo "#client_count:$client_count" >> $dir/$fsname.yaml
+
+    # saving diskfolder to delete disks with pShineDelete
+
+    echo "#diskfolder:$diskfolder" >> $dir/$fsname.yaml
+
+
+    ### Writing cloud-config ###
+
+    # ssh key to connect as root
+
+    echo -ne "#cloud-config
+users:
+    - name: root
+      ssh-authorized-keys: 
+        -" > $dir/$fsname.cloud-config
+
+    cat $HOME/.ssh/id_rsa.pub >> $dir/$fsname.cloud-config
+
+    # making sure qemu-guest-agent is up and running
+    # needed in case of pcocc execc
+    # preserve_hostname is also needed so they dont all keep the same hostname
+    # else, shine can not work properly
+
+    # shine model is kind of hardcoded right now, but I might add a way to use specific model file later
+
+    echo -e "
+preserve_hostname: false
+
+write_files:
+    - path: /etc/shine/models/$fsname.lmf
+      permissions: '0644'
+      content: |
+        # The Lustre filesystem name
+        fs_name: $fsname
+        #Hosts to Lnet NIDs mapping
+        nid_map: nodes=vm[0-$(($total_vm-1))] nids=vm[0-$(($total_vm-1))]@tcp0
+
+        #Default client mount point path
+        mount_path: /$fsname
+        #Clients definition
+        client: node=vm[$(($mds_count+$oss_count))-$(($total_vm-1))] mount_path=/$fsname.1" >> $dir/$fsname.cloud-config
+
+
+    tab=(b c d e f g h i)       # using a list of values for device name
+                            # assuming it goes from /dev/vda incrementing last letter to /dev/vdi and beyond, so might not work on all systems
+                            # need to put more letters to go for more than 8 targets/vm
+
+    t=0            # keep track of the last mdt device name (last letter) so mgt can take the next one
+
+    for i in `seq 0 $(($mds_count-1))`; do
+
+        for j in `seq 0 $(($mdt_count-1))`; do
+        echo -e "        mdt: node=vm$i dev=/dev/vd${tab[j]}" >> $dir/$fsname.cloud-config
+        t=$(($t+1))
+        done
+        if [ $i -eq 0 ]; then
+        echo -e "        mgt: node=vm$i dev=/dev/vd${tab[t]}" >> $dir/$fsname.cloud-config
+        fi
+    done
+
+    for i in `seq $mds_count $(($oss_count+$mds_count-1))`; do
+        for j in `seq 0 $((ost_count-1))`; do
+        echo -e "        ost: node=vm$i dev=/dev/vd${tab[j]}" >> $dir/$fsname.cloud-config
+        done
+    done
+
+    ## Optional parameters ##
+
+    echo "$options" | sed 's/^/        /g' >> $dir/$fsname.cloud-config
+
+    #echo -e "        stripe_size: 1048576
+    #        stripe_count: 1
+    #        mdt_mount_options: acl
+    #        mount_options: user_xattr
+    #        mgt_mount_path: /mnt/\$fs_name/mgt
+    #        mdt_mount_path: /mnt/\$fs_name/mdt/\$index
+    #        ost_mount_path: /mnt/\$fs_name/ost/\$index" >> $dir/$fsname.cloud-config
+
+
+    ### Starting the Cluster ###
+    ### with Shine script ###
+
+    echo "#!/bin/bash
+
+    pcocc ssh root@vm0 \"shine install -m /etc/shine/models/$fsname.lmf && yes | shine format -f $fsname && shine start -f $fsname && shine mount -f $fsname\"
+    exec bash" > pShineCreate.temp
+    chmod +x pShineCreate.temp
+
+    pcocc alloc -p $partition -c $core_count -E "./pShineCreate.temp" $args$fsname/client:$client_count
+
+    rm pShineCreate.temp
+}
+
+
+
+delete () {
+    if [ $# -eq 0 ]; then
+        echo "Missing Argument"
+        exit 1
+    fi
+
+    dir=~/.pcocc/templates.d
+
+    if ! [ -e "$dir/$1.yaml" ]; then
+         echo "$1 does not exist"
+         exit 1
+    fi
+
+    diskfolder=`cat ~/.pcocc/templates.d/$1.yaml | grep ^#disk | cut -d ':' -f2`
+
+    echo "The following files and folders will be erased :"
+    echo $diskfolder/$1
+    echo $diskfolder/$1/* | tr ' ' '\n'
+    echo $dir/$1.* | tr ' ' '\n'
+
+    read -p "Are you sure you want to delete all the listed files ?(y/n)" -r
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        rm -r $diskfolder/$1
+        rm $dir/$1.*
+    fi
+}
+
+start () {
+    core=""
+    partition=""
+    fsname=""
+
+    while [[ $# -gt 0 ]]; do
+        key="$1"
+
+        case $key in
+        -c)
+        core="$2"
+        shift # past argument
+        shift # past value
+        ;;
+        -p)
+        partition="$2"
+        shift # past argument
+        shift # past value
+        ;;
+        -f)
+        fsname="$2"
+        shift
+        shift
+        ;;
+        *)
+        echo "Invalid argument: $key"
+        exit 1
+        esac
+    done
+
+    if [ "$core" = "" ]||[ "$partition" = "" ]||[ "$fsname" = "" ]; then
+         echo "Needed options : -c [numbler of core], -p [partition], -f [filesystem]"
+         exit 1
+    fi
+
+
+    client=`cat ~/.pcocc/templates.d/$fsname.yaml | grep ^#client | cut -d ':' -f2`
+
+    args=`cat ~/.pcocc/templates.d/$fsname.yaml | grep ^fstest/ | cut -d ':' -f1 | tr '\n' ',' | cut -d ',' -f2-`
+
+    echo "#!/bin/bash
+
+    pcocc ssh root@vm0 \"shine install -m /etc/shine/models/$fsname.lmf && shine start -f $fsname && shine mount -f $fsname\"
+    exec bash" > pShineStart.temp
+    chmod +x pShineStart.temp
+
+    pcocc alloc -c $core -p $partition -E "./pShineStart.temp" $args$fsname/client:$(($client-1))
+
+    rm pShineStart.temp
+}
+
+if [ $# -eq 0 ]; then
+    echo "Missing argument, try ./pShine --help"
+    exit 1
+fi
+
+key="$1"
+
+case $key in
+    create)
+    shift
+    create $@
+    exit 0 
+    ;;
+    delete)
+    shift
+    delete $@
+    exit 0
+    ;;
+    start)
+    shift
+    start $@
+    exit 0 
+    ;;
+    --help)
+    echo "Usage :
+
+Create and launch a pcocc Cluster with a Lustre FS based on a conf file:
+    ./pShine create MODEL_FILE
+
+Start a previously created one with desired pcocc options:
+    ./pShine start -c CORE_NUMBER -p PARTITION -f FSNAME
+
+Delete an entire pcocc Cluster with Lustre FS:
+    ./pShine delete FSNAME
+"     
+    shift
+    exit 0
+    ;;
+    *)
+    echo "Invalid argument: $key ;      Try ./pShine --help "
+    exit 1
+esac
