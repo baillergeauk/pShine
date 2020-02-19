@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ce0fbc2e_d5e9656c",
+        "filename": "example.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-19T10:40:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "77bd7145_79ee39a1",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8b4801ab_1e608172",
         "filename": "example.conf",
         "patchSetId": 2
@@ -33,6 +51,24 @@
       "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8190a196_8c6af239",
+        "filename": "example.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-19T10:40:15Z",
+      "side": 1,
+      "message": "Can use $CCCSCRATCHDIR or any environment variable with the same syntax.\n${env:var} syntax does not work\nAdded comments on code to explicit this",
+      "parentUuid": "8b4801ab_1e608172",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "4bc4f0a4_ec84837f",
+        "filename": "example.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-19T10:40:15Z",
+      "side": 1,
+      "message": "Units can be K, KB, M, MB, G, GB, and so on as it relies on the -s option of truncate\nAdded comments on the code to make this explicit",
+      "parentUuid": "6dde2ae3_33337f6e",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "645d7014_6fc7e242",
         "filename": "pShine",
         "patchSetId": 2
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "62c36cb4_51730763",
+        "filename": "pShine",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-19T10:40:15Z",
+      "side": 1,
+      "message": "A lot of things were fixed thanks to this.\nThe online service still works.",
+      "parentUuid": "645d7014_6fc7e242",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7593f056_11800a4d",
         "filename": "pShine",
         "patchSetId": 2
@@ -84,6 +156,24 @@
       "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7f1e72ca_59b8701c",
+        "filename": "pShine",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-19T10:40:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7593f056_11800a4d",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -110,6 +200,30 @@
     },
     {
       "key": {
+        "uuid": "a160c1a7_faf8a0d2",
+        "filename": "pShine",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-19T10:40:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "17352acd_1da18c9f",
+      "range": {
+        "startLine": 12,
+        "startChar": 17,
+        "endLine": 12,
+        "endChar": 18
+      },
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dd2df995_dbcf027d",
         "filename": "pShine",
         "patchSetId": 2
@@ -124,6 +238,24 @@
       "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "30551674_609152a7",
+        "filename": "pShine",
+        "patchSetId": 2
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-19T10:40:15Z",
+      "side": 1,
+      "message": "Replaced echo by heredoc for the majority of multiple lines writings.\nExcept for the one with echo -n, because heredoc does not allow to end without new line",
+      "parentUuid": "dd2df995_dbcf027d",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -144,6 +276,24 @@
     },
     {
       "key": {
+        "uuid": "97745aa6_6352a106",
+        "filename": "pShine",
+        "patchSetId": 2
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-19T10:40:15Z",
+      "side": 1,
+      "message": "Indeed, the name now rely on the filesystem\u0027s name as you can\u0027t run 2 instances of the same FS.\n\nWith the run command in the cloud-init, the same command will be executed every launch.\nExcept we want to execute different command depending on whether we are starting the cluster with \"create\" or \"start\".\nI could make \"start\" replace the command in the cloud-config before launching the cluster though",
+      "parentUuid": "3e57832d_6e9f1f5a",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "49bf633e_85ce9884",
         "filename": "pShine",
         "patchSetId": 2
@@ -158,6 +308,24 @@
       "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "65271c68_95dd8674",
+        "filename": "pShine",
+        "patchSetId": 2
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-19T10:40:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "49bf633e_85ce9884",
+      "revId": "57240ee4b73add979a3389228eabe9554fff4a85",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
