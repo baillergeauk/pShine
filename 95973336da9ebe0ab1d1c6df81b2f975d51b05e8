@@ -1,0 +1,458 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5d2466d0_4712e789",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "This does not seem to be enough for Gerrit to detect this is a shell script. Can you rename pShine into pShine.bash (and then pShine.sh if it still does not work)?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 11
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "be999804_af452c88",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(minor) Inside functions, declare your variables with either \"declare\" or \"local\" to avoid leaking them to the caller.\n\ncreate()\n{\n    local dir total_mdt total_ost ...\n    ...\n}",
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e0e9a72d_0bb3e04f",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) [[ ]] is the preferred test construct",
+      "range": {
+        "startLine": 5,
+        "startChar": 7,
+        "endLine": 5,
+        "endChar": 8
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "249e027c_d14b36d1",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "Consider using english for user-visible messages (you never know, someone out there might be interested).",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 92
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fb288574_78e1b057",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(nit++) Consider using more precise error codes such as those defined in sysexits.h\n\nref: https://www.freebsd.org/cgi/man.cgi?query\u003dsysexits\u0026apropos\u003d0\u0026sektion\u003d0\u0026manpath\u003dFreeBSD+4.3-RELEASE\u0026format\u003dhtml",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 7,
+        "endChar": 14
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "48541af7_4148473c",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "Eww... But that\u0027s fine for a start, I guess \u003d)\n\nAdd a comment to explain this \"loads\" the configuration",
+      "range": {
+        "startLine": 10,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 15
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e0fdff5b_489b8a59",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) add spaces around mathematical operators",
+      "range": {
+        "startLine": 12,
+        "startChar": 26,
+        "endLine": 12,
+        "endChar": 27
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "94cf65a6_3c5965e8",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "You can use PCOCC_USER_CONF_DIR (or PCOCC_CONF_USER_DIR, I can never remember) to override the default prefix of \"$HOME/.pcocc\".\n\nThus here:\n\ndir\u003d\"${PCOCC_USER_CONF_DIR:-$HOME/.pcocc}\"/templates.d",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 18,
+        "endChar": 30
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f4a3c0d3_0bfa152d",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) \"dir\" is a little plain, how about something that conveys this is pcocc\u0027s template directory? \"pcocc_templates_dir\" (maybe just \"templates_dir\")",
+      "range": {
+        "startLine": 19,
+        "startChar": 4,
+        "endLine": 19,
+        "endChar": 7
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "16951d5d_2a611bce",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) This sort of comments makes me think you should split the function",
+      "range": {
+        "startLine": 21,
+        "startChar": 4,
+        "endLine": 21,
+        "endChar": 64
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2e80c6b7_f0bb30aa",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(nit) mkdir -p \"$dir\"",
+      "range": {
+        "startLine": 23,
+        "startChar": 1,
+        "endLine": 25,
+        "endChar": 6
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6f546960_078c4621",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) rm -rf \"${diskfolder:?}\"/\"$fsname\"",
+      "range": {
+        "startLine": 29,
+        "startChar": 4,
+        "endLine": 31,
+        "endChar": 6
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bd0d9c7a_e67a3763",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) add a space around mathematical operators",
+      "range": {
+        "startLine": 37,
+        "startChar": 33,
+        "endLine": 37,
+        "endChar": 34
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8d53eef0_eb4e8678",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) Unless you really care that indexes start at 0, consider using $(seq $total_mdt).",
+      "range": {
+        "startLine": 37,
+        "startChar": 13,
+        "endLine": 37,
+        "endChar": 38
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "891b06b1_f7ec05f5",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) This is rather hard to read.\n\nHow about having a template for each role (mds.yaml, oss.yaml) and using that from the script?\n\nMaybe you can get away with just two functions mds_template() and oss_template(), but I think this is something one could legitimately want to edit without touching your code.",
+      "range": {
+        "startLine": 63,
+        "startChar": 8,
+        "endLine": 65,
+        "endChar": 63
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aab465a6_cc6e4967",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) you can redirect the output for the whole for loop instead\n\n$\u003e for _ in {0..3}; do echo \"test\"; done \u003e test.txt\n$\u003e cat test.txt\ntest\ntest\ntest\ntest",
+      "range": {
+        "startLine": 67,
+        "startChar": 38,
+        "endLine": 67,
+        "endChar": 62
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b4690f71_23f019d5",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) missing a level of indentation\n\nfor ...; do\n    echo ...\n    t+\u003d1 # this only works if \"t\" is declared with \"declare -i t\" or \"local -i t\"\ndone",
+      "range": {
+        "startLine": 69,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 8
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "70432026_376e9390",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) Use mktemp instead\n\n local file\n file\u003d\"$(mktemp --suffix\u003d-\"$fsname\".bash)\"\n trap -- \"rm -f \u0027$file\u0027\" EXIT # This will delete the file once the program exits",
+      "range": {
+        "startLine": 175,
+        "startChar": 10,
+        "endLine": 175,
+        "endChar": 30
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "558804a3_88d5b784",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) useless redirection",
+      "range": {
+        "startLine": 256,
+        "startChar": 27,
+        "endLine": 256,
+        "endChar": 29
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c397fae8_36446a58",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-21T15:47:32Z",
+      "side": 1,
+      "message": "(style) Put this is in a separate function",
+      "range": {
+        "startLine": 298,
+        "startChar": 8,
+        "endLine": 308,
+        "endChar": 1
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
