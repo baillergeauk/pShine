@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7fff02d6_2c830504",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5d2466d0_4712e789",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 11
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "be999804_af452c88",
         "filename": "pShine",
         "patchSetId": 6
@@ -39,6 +63,24 @@
       "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e22d83ab_cfd30257",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "be999804_af452c88",
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "aec71355_35c95015",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0e9a72d_0bb3e04f",
+      "range": {
+        "startLine": 5,
+        "startChar": 7,
+        "endLine": 5,
+        "endChar": 8
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "249e027c_d14b36d1",
         "filename": "pShine",
         "patchSetId": 6
@@ -85,6 +151,30 @@
       "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5e7e4dad_549bbea8",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "249e027c_d14b36d1",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 92
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -111,6 +201,30 @@
     },
     {
       "key": {
+        "uuid": "7736bede_71b0835c",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fb288574_78e1b057",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 7,
+        "endChar": 14
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "48541af7_4148473c",
         "filename": "pShine",
         "patchSetId": 6
@@ -122,6 +236,30 @@
       "writtenOn": "2020-02-21T15:47:32Z",
       "side": 1,
       "message": "Eww... But that\u0027s fine for a start, I guess \u003d)\n\nAdd a comment to explain this \"loads\" the configuration",
+      "range": {
+        "startLine": 10,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 15
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bfdf3da8_5ddc9149",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "I added a comment for now.\nWhats is the problem with \"source\" and how should I correct it?",
+      "parentUuid": "48541af7_4148473c",
       "range": {
         "startLine": 10,
         "startChar": 4,
@@ -157,6 +295,30 @@
     },
     {
       "key": {
+        "uuid": "4b10a465_2a4337bb",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0fdff5b_489b8a59",
+      "range": {
+        "startLine": 12,
+        "startChar": 26,
+        "endLine": 12,
+        "endChar": 27
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "94cf65a6_3c5965e8",
         "filename": "pShine",
         "patchSetId": 6
@@ -180,6 +342,30 @@
     },
     {
       "key": {
+        "uuid": "a40f4c30_f3bcefee",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "It is PCOCC_USER_CONF_DIR",
+      "parentUuid": "94cf65a6_3c5965e8",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 18,
+        "endChar": 30
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f4a3c0d3_0bfa152d",
         "filename": "pShine",
         "patchSetId": 6
@@ -200,6 +386,30 @@
       "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cfe5a121_df5d7feb",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f4a3c0d3_0bfa152d",
+      "range": {
+        "startLine": 19,
+        "startChar": 4,
+        "endLine": 19,
+        "endChar": 7
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -249,6 +459,30 @@
     },
     {
       "key": {
+        "uuid": "ab6065ea_a40e35a3",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e80c6b7_f0bb30aa",
+      "range": {
+        "startLine": 23,
+        "startChar": 1,
+        "endLine": 25,
+        "endChar": 6
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6f546960_078c4621",
         "filename": "pShine",
         "patchSetId": 6
@@ -269,6 +503,30 @@
       "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fa6d1e1e_9bc5f951",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6f546960_078c4621",
+      "range": {
+        "startLine": 29,
+        "startChar": 4,
+        "endLine": 31,
+        "endChar": 6
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -318,6 +576,54 @@
     },
     {
       "key": {
+        "uuid": "fdf60dd6_afdf036b",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "I think there must always be an MDT with index\u003d0 and as I use the value of \"i\" in the loop, I think it is better to keep it that way",
+      "parentUuid": "8d53eef0_eb4e8678",
+      "range": {
+        "startLine": 37,
+        "startChar": 13,
+        "endLine": 37,
+        "endChar": 38
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "af427174_d3b769ee",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bd0d9c7a_e67a3763",
+      "range": {
+        "startLine": 37,
+        "startChar": 33,
+        "endLine": 37,
+        "endChar": 34
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "891b06b1_f7ec05f5",
         "filename": "pShine",
         "patchSetId": 6
@@ -329,6 +635,30 @@
       "writtenOn": "2020-02-21T15:47:32Z",
       "side": 1,
       "message": "(style) This is rather hard to read.\n\nHow about having a template for each role (mds.yaml, oss.yaml) and using that from the script?\n\nMaybe you can get away with just two functions mds_template() and oss_template(), but I think this is something one could legitimately want to edit without touching your code.",
+      "range": {
+        "startLine": 63,
+        "startChar": 8,
+        "endLine": 65,
+        "endChar": 63
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a6a5c5e7_91bfe432",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "The way it is now, it creates a single .yaml for each filesytem. I think it is better if you want to create multiple filesystems,and if one wants to edit it is possible and also easier in my opinion as you dont have to go through 3 differents .yaml to modify the configuration of one filesystem.\nFurthermore having all the roles grouped makes it easier to \"start\" or delete a filesystem.",
+      "parentUuid": "891b06b1_f7ec05f5",
       "range": {
         "startLine": 63,
         "startChar": 8,
@@ -364,6 +694,30 @@
     },
     {
       "key": {
+        "uuid": "bdb48fef_b15efc45",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aab465a6_cc6e4967",
+      "range": {
+        "startLine": 67,
+        "startChar": 38,
+        "endLine": 67,
+        "endChar": 62
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b4690f71_23f019d5",
         "filename": "pShine",
         "patchSetId": 6
@@ -384,6 +738,30 @@
       "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fc1f6fde_b05b4326",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b4690f71_23f019d5",
+      "range": {
+        "startLine": 69,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 8
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -410,6 +788,30 @@
     },
     {
       "key": {
+        "uuid": "b2776d77_7e248768",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "70432026_376e9390",
+      "range": {
+        "startLine": 175,
+        "startChar": 10,
+        "endLine": 175,
+        "endChar": 30
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "558804a3_88d5b784",
         "filename": "pShine",
         "patchSetId": 6
@@ -433,6 +835,30 @@
     },
     {
       "key": {
+        "uuid": "d69a4d6d_82303224",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "558804a3_88d5b784",
+      "range": {
+        "startLine": 256,
+        "startChar": 27,
+        "endLine": 256,
+        "endChar": 29
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c397fae8_36446a58",
         "filename": "pShine",
         "patchSetId": 6
@@ -453,6 +879,30 @@
       "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c9c4e088_f4a44881",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 1017639
+      },
+      "writtenOn": "2020-02-24T14:59:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c397fae8_36446a58",
+      "range": {
+        "startLine": 298,
+        "startChar": 8,
+        "endLine": 308,
+        "endChar": 1
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
