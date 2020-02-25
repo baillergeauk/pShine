@@ -1,0 +1,234 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c0825a9d_3fb53950",
+        "filename": "README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "This is not the workflow I expected when Dominique told me you were writing this kind of script.\n\nI sort of expected that at the end of the day, I would be able to still use pcocc directly:\n\npcocc alloc (...) lustre-mds:2,lustre-oss:16,client:128\n\nYour \"package\" would include: 1 template/image/user-data per role (ie. mds, oss, client). We can discuss the merits of both approach IRL.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 28
+      },
+      "revId": "d3d86e210e30224ae06bdd249cb73d8cc868a600",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5feaea28_1866557a",
+        "filename": "pShine.bash",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "(style) no, the whole point of using \"-p\" is that you do not need to check whether the directory already exists\n\n\u003e -p, --parents\n     no error if existing, make parent directories as needed",
+      "range": {
+        "startLine": 26,
+        "startChar": 4,
+        "endLine": 28,
+        "endChar": 6
+      },
+      "revId": "d3d86e210e30224ae06bdd249cb73d8cc868a600",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0306f581_0124fb2c",
+        "filename": "pShine.bash",
+        "patchSetId": 8
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "(style) same thing, rm -rf will not error if the path does not exist",
+      "range": {
+        "startLine": 32,
+        "startChar": 4,
+        "endLine": 34,
+        "endChar": 6
+      },
+      "revId": "d3d86e210e30224ae06bdd249cb73d8cc868a600",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "53bbb3e5_dcefb5ed",
+        "filename": "pShine.bash",
+        "patchSetId": 8
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "(style) \"-p\" is not needed since you just deleted the directory",
+      "range": {
+        "startLine": 36,
+        "startChar": 10,
+        "endLine": 36,
+        "endChar": 12
+      },
+      "revId": "d3d86e210e30224ae06bdd249cb73d8cc868a600",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1ac86327_fec9e95b",
+        "filename": "pShine.bash",
+        "patchSetId": 8
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "It would feel more natural to me to do this is the same loops that write templates.",
+      "range": {
+        "startLine": 38,
+        "startChar": 4,
+        "endLine": 46,
+        "endChar": 8
+      },
+      "revId": "d3d86e210e30224ae06bdd249cb73d8cc868a600",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "77eaba7b_5cab9497",
+        "filename": "pShine.bash",
+        "patchSetId": 8
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "I still expect you to split the script into smaller functions. ;-)",
+      "range": {
+        "startLine": 48,
+        "startChar": 4,
+        "endLine": 48,
+        "endChar": 39
+      },
+      "revId": "d3d86e210e30224ae06bdd249cb73d8cc868a600",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "10fc531b_049a9d7c",
+        "filename": "pShine.bash",
+        "patchSetId": 8
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "(minor) ${PCOCC_USER_CONF_DIR:-...}\n\nIf this is used by multiple functions, you can set before parsing the CLI",
+      "range": {
+        "startLine": 215,
+        "startChar": 18,
+        "endLine": 215,
+        "endChar": 19
+      },
+      "revId": "d3d86e210e30224ae06bdd249cb73d8cc868a600",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8cba7901_fc10d016",
+        "filename": "pShine.bash",
+        "patchSetId": 8
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "\"help\" is a bash builtin, consider using a different name (personnally, I use \"usage()\")",
+      "range": {
+        "startLine": 293,
+        "startChar": 0,
+        "endLine": 293,
+        "endChar": 4
+      },
+      "revId": "d3d86e210e30224ae06bdd249cb73d8cc868a600",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "deba2c94_da9ca38f",
+        "filename": "pShine.bash",
+        "patchSetId": 8
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "(style) consider printing the help message as well\n\n(style) consider redirecting to stderr",
+      "range": {
+        "startLine": 335,
+        "startChar": 8,
+        "endLine": 335,
+        "endChar": 65
+      },
+      "revId": "d3d86e210e30224ae06bdd249cb73d8cc868a600",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5a95ca26_b02f8107",
+        "filename": "pShine.bash",
+        "patchSetId": 8
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "I like to suffix those with a \"# EX_USAGE\" as most people do not know where the 64 comes from.",
+      "range": {
+        "startLine": 336,
+        "startChar": 8,
+        "endLine": 336,
+        "endChar": 15
+      },
+      "revId": "d3d86e210e30224ae06bdd249cb73d8cc868a600",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}

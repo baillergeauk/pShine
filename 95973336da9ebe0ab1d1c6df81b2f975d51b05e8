@@ -272,6 +272,30 @@
     },
     {
       "key": {
+        "uuid": "a8afa4dc_f5cd769c",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "Well, usually, you do not want to mix configuration and code. And in most cases, you want to check any user-provided data for misformatting errors and/or malicious payloads.\n\nA good way to fix it would be to use a well-known config format, and a robust parser.\n\nBut nevermind that, your approach is good. It allows you to quickly get something that works... and works well.",
+      "parentUuid": "bfdf3da8_5ddc9149",
+      "range": {
+        "startLine": 10,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 15
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e0fdff5b_489b8a59",
         "filename": "pShine",
         "patchSetId": 6
@@ -624,6 +648,30 @@
     },
     {
       "key": {
+        "uuid": "2e80171b_7f45d711",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "fdf60dd6_afdf036b",
+      "range": {
+        "startLine": 37,
+        "startChar": 13,
+        "endLine": 37,
+        "endChar": 38
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "891b06b1_f7ec05f5",
         "filename": "pShine",
         "patchSetId": 6
@@ -671,6 +719,30 @@
     },
     {
       "key": {
+        "uuid": "caaa8f09_2bea718d",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "Need to discuss IRL",
+      "parentUuid": "a6a5c5e7_91bfe432",
+      "range": {
+        "startLine": 63,
+        "startChar": 8,
+        "endLine": 65,
+        "endChar": 63
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "aab465a6_cc6e4967",
         "filename": "pShine",
         "patchSetId": 6
@@ -706,6 +778,30 @@
       "side": 1,
       "message": "Done",
       "parentUuid": "aab465a6_cc6e4967",
+      "range": {
+        "startLine": 67,
+        "startChar": 38,
+        "endLine": 67,
+        "endChar": 62
+      },
+      "revId": "95973336da9ebe0ab1d1c6df81b2f975d51b05e8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63a95066_6670a14c",
+        "filename": "pShine",
+        "patchSetId": 6
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1010215
+      },
+      "writtenOn": "2020-02-25T08:04:13Z",
+      "side": 1,
+      "message": "Not done ?",
+      "parentUuid": "bdb48fef_b15efc45",
       "range": {
         "startLine": 67,
         "startChar": 38,
